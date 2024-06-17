@@ -1,0 +1,79 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { URLimg, URLfavorites } from "../consts";
+import { useNavigate, Link } from "react-router-dom";
+import NavbarPage from "./NavbarPage";
+
+function FavPage() {
+  const [favorites, setFavorites] = useState([]);
+  const navigate = useNavigate();
+
+  async function fetchFavorites() {
+    try {
+      const response = await axios.get(`${URLfavorites}?_expand=artwork`);
+      setFavorites(response.data);
+    } catch (error) {
+      console.log("Error fetching favorites:", error);
+    }
+  }
+
+  // Call fetchFavorites when the component mounts
+  useEffect(() => {
+    fetchFavorites();
+  }, []);
+
+  // Function to handle the deletion of a favorite
+  async function handleDeleteFavorite(id) {
+    try {
+      await axios.delete(`${URLfavorites}/${id}`);
+      setFavorites(favorites.filter((fav) => fav.id !== id));
+    } catch (error) {
+      console.log("Error deleting favorite:", error);
+    }
+  }
+
+  if (!favorites.length) {
+    return (
+      <>
+        <NavbarPage />
+        <p>Loading favorites...</p>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <NavbarPage />
+
+      <h1>Favorite Artworks</h1>
+      <ul>
+        {favorites.map((favorite) => (
+          <div key={favorite.id}>
+            <h2>{favorite.artwork.title}</h2>
+            {favorite.artwork.image_id ? (
+              <img
+                src={`${URLimg}${favorite.artwork.image_id}/full/843,/0/default.jpg`}
+                alt={favorite.artwork.title}
+                width="100"
+              />
+            ) : (
+              <label>Image not available</label>
+            )}
+            <button onClick={() => handleDeleteFavorite(favorite.id)}>
+              Remove from Favorites
+            </button>
+            <label>Artist: {favorite.artwork.artist_title || "Unknown"}</label>
+            <label>
+              Place of Origin: {favorite.artwork.place_of_origin || "Unknown"}
+            </label>
+            <Link to={`/gallery/${favorite.artwork.id}`}>
+              {favorite.artwork.title}
+            </Link>
+          </div>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+export default FavPage;
