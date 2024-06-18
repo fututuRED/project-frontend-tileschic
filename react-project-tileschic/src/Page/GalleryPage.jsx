@@ -3,6 +3,7 @@ import axios from "axios";
 import { URLart, URLfavorites, URLimg } from "../consts";
 import { Link } from "react-router-dom";
 import NavbarPage from "./NavbarPage";
+import "./../index.css";
 
 function GalleryPage() {
   const [artworks, setArtworks] = useState([]);
@@ -67,34 +68,38 @@ function GalleryPage() {
     <>
       <NavbarPage />
 
-      <ul>
+      <ul className="gal">
         {artworks.map((artwork) => {
           const isFav = isFavorite(artwork.id);
           return (
             <div key={artwork.id}>
-              <h2>{artwork.title}</h2>
               {artwork.image_id ? (
-                <img
-                  src={`${URLimg}${artwork.image_id}/full/843,/0/default.jpg`}
-                  alt={artwork.title}
-                  width="100"
-                />
+                <figure className="gal-grid-img">
+                  <img
+                    src={`${URLimg}${artwork.image_id}/full/843,/0/default.jpg`}
+                    alt={artwork.title}
+                  />
+                  <figcaption>{artwork.title}</figcaption>
+                </figure>
               ) : (
-                <label>Image not available</label>
+                <span>Image not available</span>
               )}
-              <button
-                disabled={isFetching}
-                onClick={() =>
-                  isFav ? removeFavorite(isFav.id) : addFavorite(artwork.id)
-                }
-              >
-                {isFavorite(artwork.id) ? "In Favorites" : "Add to Favorites"}
-              </button>
-              <label>Artist: {artwork.artist_title || "Unknown"}</label>
-              <label>
-                Place of Origin: {artwork.place_of_origin || "Unknown"}
-              </label>
-              <Link to={`/gallery/${artwork.id}`}>{artwork.title}</Link>
+              <div className="gal-text-grid">
+                <button
+                  className="fav-but"
+                  disabled={isFetching}
+                  onClick={() =>
+                    isFav ? removeFavorite(isFav.id) : addFavorite(artwork.id)
+                  }
+                >
+                  {isFavorite(artwork.id) ? "In Favorites" : "Add to Favorites"}
+                </button>
+                <span>Artist: {artwork.artist_title || "Unknown"}</span>
+                <span>
+                  Place of Origin: {artwork.place_of_origin || "Unknown"}
+                </span>
+                <Link to={`/gallery/${artwork.id}`}>{artwork.title}</Link>
+              </div>
             </div>
           );
         })}
