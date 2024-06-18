@@ -8,7 +8,7 @@ function NavbarPage() {
         <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
-        <NavLink to={"/gallery/:id"}>Gallery</NavLink>
+        <NavLink to={"/gallery"}>Gallery</NavLink>
       </li>
       <li>
         <NavLink to={"/select"}>Selected Piece</NavLink>

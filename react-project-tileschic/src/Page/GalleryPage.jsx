@@ -3,7 +3,6 @@ import axios from "axios";
 import { URLart, URLfavorites, URLimg } from "../consts";
 import { Link } from "react-router-dom";
 import NavbarPage from "./NavbarPage";
-import FavPage from "./FavPage";
 
 function GalleryPage() {
   const [artworks, setArtworks] = useState([]);

@@ -6,8 +6,9 @@ function HomePage() {
       <NavbarPage />
       <h1>TILES (so) CHIC</h1>
       <p>
-        Always thought, this would be so great as a floor-tile in my bathroom{" "}
-        <br />
+        Always thought, this painting, well wouldn't it be nice to have it as a
+        floor-tile in my bathroom <br />
+        If this has cross your mind, WELCOME! <br />
         Here you are now, have a look at some artworks from different artist
         picked by your host!
         <br />

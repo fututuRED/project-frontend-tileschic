@@ -3,7 +3,9 @@ import GalleryPage from "./Page/GalleryPage";
 import FavPage from "./Page/FavPage";
 import HomePage from "./Page/HomePage";
 import NavbarPage from "./Page/NavbarPage";
+import ErrorPage from "./Page/ErrorPage";
 import SelectedPiecePage from "./Page/SelectedPiecePage";
+import CommentForm from "./component/CommentForm";
 import { useState, useEffect } from "react";
 
 import "./App.css";
@@ -29,6 +31,7 @@ function App() {
           }
         />
         <Route path="/gallery/:id" element={<SelectedPiecePage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );

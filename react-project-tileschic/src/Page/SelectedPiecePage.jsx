@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { URLart, URLimg } from "../consts";
 import axios from "axios";
 import NavbarPage from "./NavbarPage";
+import CommentForm from "../component/CommentForm";
 
 function SelectedPiecePage() {
   const { id } = useParams(); // Fetch the id from the route parameters
@@ -15,6 +16,7 @@ function SelectedPiecePage() {
         // Replace :id with actual id fetched from useParams
         const res = await axios.get(`${URLart}/${id}`);
         setArtwork(res.data);
+        console.log(res.data);
       } catch (error) {
         console.log(error);
       }
@@ -48,6 +50,7 @@ function SelectedPiecePage() {
         <p>Artist: {artwork.artist_title || "Unknown"}</p>
         <p>Place of Origin: {artwork.place_of_origin || "Unknown"}</p>
         <p>Description: {artwork.description || "No description available"}</p>
+        <CommentForm />
       </div>
     </>
   );
