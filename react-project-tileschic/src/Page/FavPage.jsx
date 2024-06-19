@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { URLimg, URLfavorites } from "../consts";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavbarPage from "./NavbarPage";
 
 function FavPage() {
   const [favorites, setFavorites] = useState([]);
-  const navigate = useNavigate();
 
   async function fetchFavorites() {
     try {
@@ -42,34 +41,34 @@ function FavPage() {
   return (
     <>
       <NavbarPage />
-      <h1>Favorite Artworks</h1>
-      <div className="favorites-grid">
-        {favorites.map((favorite) => (
-          <div
-            className="favorite-tile"
-            key={favorite.id}
-            style={{
-              backgroundImage: `url(${URLimg}${favorite.artwork.image_id}/full/843,/0/default.jpg)`,
-            }}
-          >
-            <div className="favorite-tile-content">
-              <h2>{favorite.artwork.title}</h2>
-
-              <label>
-                Artist: {favorite.artwork.artist_title || "Unknown"}
-              </label>
-              <label>
-                Place of Origin: {favorite.artwork.place_of_origin || "Unknown"}
-              </label>
-              <Link to={`/gallery/${favorite.artwork.id}`}>
-                {favorite.artwork.title}
-              </Link>
-              <button onClick={() => handleDeleteFavorite(favorite.id)}>
-                Remove from Favorites
-              </button>
+      <div className="page-container">
+        <h1 className="title">Favorite Artworks</h1>
+        <div className="favorites-grid">
+          {favorites.map((favorite) => (
+            <div className="favorite-tile" key={favorite.id}>
+              <div className="favorite-tile-image">
+                <img
+                  src={`${URLimg}${favorite.artwork.image_id}/full/843,/0/default.jpg`}
+                  alt={favorite.artwork.title}
+                />
+              </div>
+              <div className="favorite-tile-content">
+                <h2>{favorite.artwork.title}</h2>
+                <span>
+                  Artist: {favorite.artwork.artist_title || "Unknown"}
+                </span>
+                <span>
+                  Place of Origin:{" "}
+                  {favorite.artwork.place_of_origin || "Unknown"}
+                </span>
+                <Link to={`/gallery/${favorite.artwork.id}`}>Details</Link>
+                <button onClick={() => handleDeleteFavorite(favorite.id)}>
+                  Remove from Favorites
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );

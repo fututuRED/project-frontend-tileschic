@@ -1,11 +1,19 @@
 .gal {
-  img {
-    height: 300px;
-    width: 400px;
-    object-fit: contain;
-    object-position: center;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 60px;
+  gap: 30px;
 }
+
+.gal img {
+  height: 300px;
+  width: 400px;
+  object-fit: contain;
+  object-position: center;
+  margin: 10px;
+}
+
 /* .gal {
   height: 70%;
     background-image: url("https://free-images.com/lg/cf5b/floor_tiles_hemp_bag.jpg");
