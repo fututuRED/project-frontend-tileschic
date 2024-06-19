@@ -13,6 +13,8 @@ function HomePage() {
           Here you are now, have a look at some artworks from different artist
           picked by your host!
         </p>
+        <h2>About</h2>
+        <p>From some artworks...</p>
         <p>
           Hope you'll enjoy them and who knows, end up with remodeling you're
           whole flat... <br />

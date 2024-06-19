@@ -72,7 +72,7 @@ function GalleryPage() {
         {artworks.map((artwork) => {
           const isFav = isFavorite(artwork.id);
           return (
-            <div key={artwork.id}>
+            <div key={artwork.id} className="gal-grid-container">
               {artwork.image_id ? (
                 <figure className="gal-grid-img">
                   <img
@@ -84,6 +84,7 @@ function GalleryPage() {
               ) : (
                 <span>Image not available</span>
               )}
+
               <div className="gal-text-grid">
                 <button
                   className="fav-but"
@@ -98,7 +99,7 @@ function GalleryPage() {
                 <span>
                   Place of Origin: {artwork.place_of_origin || "Unknown"}
                 </span>
-                <Link to={`/gallery/${artwork.id}`}>{artwork.title}</Link>
+                <Link to={`/gallery/${artwork.id}`}>Details</Link>
               </div>
             </div>
           );

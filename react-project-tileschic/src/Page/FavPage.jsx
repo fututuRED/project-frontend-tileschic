@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import { URLimg, URLfavorites } from "../consts";
 import { Link } from "react-router-dom";
 import NavbarPage from "./NavbarPage";
@@ -54,16 +55,18 @@ function FavPage() {
               </div>
               <div className="favorite-tile-content">
                 <h2>{favorite.artwork.title}</h2>
-                <span>
+                <blockquote>
                   Artist: {favorite.artwork.artist_title || "Unknown"}
-                </span>
-                <span>
+                  <br />
                   Place of Origin:{" "}
                   {favorite.artwork.place_of_origin || "Unknown"}
-                </span>
+                </blockquote>
                 <Link to={`/gallery/${favorite.artwork.id}`}>Details</Link>
-                <button onClick={() => handleDeleteFavorite(favorite.id)}>
-                  Remove from Favorites
+                <button
+                  className="remove"
+                  onClick={() => handleDeleteFavorite(favorite.id)}
+                >
+                  Remove
                 </button>
               </div>
             </div>

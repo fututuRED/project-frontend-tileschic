@@ -99,37 +99,57 @@ ul {
   max-width: 1200px; /* Max width for content */
   margin: 0 auto; /* Center the content */
   padding: 20px; /* Top-level padding */
+  background-image: url("https://free-images.com/lg/f4e0/marble_texture_background_png_13.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .title {
   text-align: center;
   margin-bottom: 20px; /* Space below the title */
   font-size: 2.5rem; /* Adjust as needed */
+  color: rgb(51, 51, 67);
 }
 
 .favorites-grid {
   display: grid;
+  background-color: #f9f9fa;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /*responsive */
   gap: 20px; /* Space between the tiles */
   padding: 20px;
-  border: 5px solid #ddd;
+  border: 10px solid #3f496c;
+  border-image: linear-gradient(to right, #3f496c, #475588) 1;
+  border-style: double;
   justify-items: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
+  background-image: url("https://free-images.com/lg/f4e0/marble_texture_background_png_13.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Each tile */
 .favorite-tile {
   position: relative;
   overflow: hidden;
-  width: 100%; /* Fixed width */
-  aspect-ratio: 1/1;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   transition: transform 0.3s; /* Smooth transform on hover */
-  border: 2px solid #ccc;
+  border: 10px double #3f496c;
+  /* border-style: double; */
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 .favorite-tile img {
-  width: 100%;
+  border: solid 6px #475588;
+  border-style: double;
+  width: 90%;
   height: 100%; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the whole image fits within the tile */
+  object-fit: contain; /* Ensure the whole image fits within the tile */
 }
 
 .favorite-tile:hover {
@@ -157,9 +177,9 @@ ul {
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
-.favorite-tile span {
+.favorite-tile blockquote {
   margin: 5px 0;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 /* Link styling */
@@ -168,7 +188,7 @@ ul {
   color: #1e265f; /* Link color */
   text-decoration: none; /* Remove underline */
   margin: 5px 0; /* Spacing above the link */
-  font-size: 0.9rem; /* Font size */
+  font-size: 0.5rem; /* Font size */
   font-weight: bolder;
 }
 
@@ -176,9 +196,23 @@ ul {
   color: rgb(235, 100, 237); /* Underline on hover */
 }
 
-.favorite-tile-button {
+/* .favorite-tile-button {
+  background-color: #eb8245; /* Button color 
+  width: min-content;
+  font-size: 0.5rem;
+  color: white; 
+  border: none; 
+  padding: 5px 10px; 
+  font-size: 0.5rem;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s; 
+  margin-top: 10px;
+} */
+.remove {
   background-color: #eb8245; /* Button color */
-  width: auto;
+  width: min-content;
+  font-size: 0.5rem;
   color: white; /* Text color */
   border: none; /* Remove default border */
   padding: 5px 10px; /* Padding inside the button */

@@ -16,6 +16,9 @@ function NavbarPage() {
       <li>
         <NavLink to={"/fav-page"}>Your Favorites</NavLink>
       </li>
+      <li>
+        <NavLink to={"/creations"}>Creations</NavLink>
+      </li>
     </ul>
   );
 }
