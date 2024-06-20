@@ -1,5 +1,7 @@
 import React from "react";
 import NavbarPage from "./NavbarPage";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import "../css/Home.css";
 function HomePage() {
   return (
     <>
@@ -14,13 +16,57 @@ function HomePage() {
           picked by your host!
         </p>
         <h2>About</h2>
-        <p>From some artworks...</p>
+        <p>
+          By displaying some of the finest, in our opinion, artworks from the
+          Art Institute of Chicago;
+          <br />
+          We invite you to post what you thing of them,
+          <br />
+          To create your favorites page where you'll find them in a floor-tile
+          fashion, and just to give you a brief idea of what an artwork could be
+          like if it were a tile!
+        </p>
         <p>
           Hope you'll enjoy them and who knows, end up with remodeling you're
-          whole flat... <br />
-          OR at least have a different view on some worth knowing artists ;-)
+          whole...
+          <br />
+          bathroom! <br />
+          OR, at least, having a different perspective while browsing in museums
+          or galleries!
         </p>
       </div>
+      <footer>
+        <div className="about-container">
+          <h4>About Me</h4>
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/pRci-DNLZez5I-eoQuY5u6_oJwo=/78x0:1322x933/1520x1013/filters:focal(78x0:1322x933):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55912251/1_tQM0hcRiO1ZWEAj_if-Tzw.0.jpeg"
+            alt="Avatar"
+            className="avatar"
+          />
+
+          <p>
+            Hello! Im Reda, a passionate developer. Feel free to have a look ath
+            those: the following platforms:
+          </p>
+
+          <div className="social-links">
+            <a
+              href="www.linkedin.com/in/reda-d-76b0942b9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="icon" />
+            </a>
+            <a
+              href="https://github.com/your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="icon" />
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

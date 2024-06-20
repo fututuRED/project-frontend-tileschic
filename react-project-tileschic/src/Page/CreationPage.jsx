@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import NavbarPage from "./NavbarPage";
-import { URLimg, URLcrea } from "../consts"; // Ensure URLcrea is imported correctly
-import "./../App.css"; // Assuming you have a CSS file for style
+import { URLimg, URLcrea } from "../consts";
 
+import "../css/App.css";
 const CreationPage = () => {
   const location = useLocation();
   const { artwork } = location.state || {};
-  const [title, setTitle] = useState(""); // To manage title state
+  const [title, setTitle] = useState("");
   const [colorfulness, setColorfulness] = useState(32.8709); // Default or computed value
   const [percentage, setPercentage] = useState(0.0008442986622087696); // Default or computed value
   const [population, setPopulation] = useState(6); // Default or computed value
@@ -83,7 +83,7 @@ const CreationPage = () => {
     <>
       <NavbarPage />
       <div className="creation-page">
-        <h1>Modify Artwork: {artwork.title}</h1>
+        <h1>ArtWork in Progress...</h1>
         {artwork.image_id && (
           <img
             src={`${URLimg}${artwork.image_id}/full/843,/0/default.jpg`}

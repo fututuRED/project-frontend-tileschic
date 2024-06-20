@@ -11,7 +11,7 @@ function NavbarPage() {
         <NavLink to={"/gallery"}>Gallery</NavLink>
       </li>
       <li>
-        <NavLink to={"/select"}>Selected Piece</NavLink>
+        <NavLink to={"/select"}>Details</NavLink>
       </li>
       <li>
         <NavLink to={"/fav-page"}>Your Favorites</NavLink>

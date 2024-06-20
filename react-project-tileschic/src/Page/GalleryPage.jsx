@@ -3,7 +3,7 @@ import axios from "axios";
 import { URLart, URLfavorites, URLimg } from "../consts";
 import { Link } from "react-router-dom";
 import NavbarPage from "./NavbarPage";
-import "./../index.css";
+import "./../css/index.css";
 
 function GalleryPage() {
   const [artworks, setArtworks] = useState([]);
@@ -99,7 +99,9 @@ function GalleryPage() {
                 <span>
                   Place of Origin: {artwork.place_of_origin || "Unknown"}
                 </span>
-                <Link to={`/gallery/${artwork.id}`}>Details</Link>
+                <Link className="details" to={`/gallery/${artwork.id}`}>
+                  Details
+                </Link>
               </div>
             </div>
           );
