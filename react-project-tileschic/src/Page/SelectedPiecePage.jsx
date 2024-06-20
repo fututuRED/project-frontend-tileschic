@@ -6,8 +6,9 @@ import axios from "axios";
 import NavbarPage from "./NavbarPage";
 import { useNavigate, Navigate } from "react-router-dom";
 import "../css/index.css";
+
 function SelectedPiecePage() {
-  const { id } = useParams(); // Fetch the id from the route parameters
+  const { id } = useParams();
   const [artwork, setArtwork] = useState(null);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
