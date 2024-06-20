@@ -113,8 +113,7 @@ ul {
 
 .favorites-grid {
   display: grid;
-  background-color: #f9f9fa;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /*responsive */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive */
   gap: 20px; /* Space between the tiles */
   padding: 20px;
   border: 10px solid #3f496c;
@@ -135,17 +134,16 @@ ul {
   width: 100%;
   aspect-ratio: 1 / 1;
   transition: transform 0.3s; /* Smooth transform on hover */
-  border: 10px double #3f496c;
-  /* border-style: double; */
-
+  border: 10px double #3f496c; /* Double border style */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
+
 .favorite-tile img {
-  border: solid 6px #475588;
+  border: solid 6px #475588; /* Border for images inside tile */
   border-style: double;
   width: 90%;
   height: 100%; /* Maintain aspect ratio */
@@ -155,6 +153,7 @@ ul {
 .favorite-tile:hover {
   transform: scale(1.05);
 }
+
 .favorite-tile-content {
   position: absolute;
   top: 0;
@@ -166,7 +165,6 @@ ul {
   align-items: center;
   justify-content: center;
   color: white;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   padding: 10px;
   overflow: hidden;
   text-align: center;
@@ -177,12 +175,12 @@ ul {
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
+
 .favorite-tile blockquote {
   margin: 5px 0;
   font-size: 0.5rem;
 }
 
-/* Link styling */
 .favorite-tile a {
   display: block; /* Make the link a block element */
   color: #1e265f; /* Link color */
@@ -193,22 +191,10 @@ ul {
 }
 
 .favorite-tile a:hover {
-  color: rgb(235, 100, 237); /* Underline on hover */
+  color: rgb(235, 100, 237); /* Color on hover */
 }
 
-/* .favorite-tile-button {
-  background-color: #eb8245; /* Button color 
-  width: min-content;
-  font-size: 0.5rem;
-  color: white; 
-  border: none; 
-  padding: 5px 10px; 
-  font-size: 0.5rem;
-  border-radius: 5px; 
-  cursor: pointer;
-  transition: background-color 0.3s; 
-  margin-top: 10px;
-} */
+/* Remove button styling */
 .remove {
   background-color: #eb8245; /* Button color */
   width: min-content;
@@ -225,4 +211,29 @@ ul {
 
 .favorite-tile-button:hover {
   background-color: #ff4747; /* Darker shade on hover */
+}
+
+.creation-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.preview p {
+  margin: 0;
+  padding: 5px 0;
 }
