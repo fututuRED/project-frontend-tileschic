@@ -9,8 +9,8 @@ function HomePage() {
       <div className="home">
         <h1>TILES |so| CHIC</h1>
         <p>
-          Always thought, this painting, well wouldn't it be nice to have it as
-          a floor-tile in my bathroom <br />
+          Always thought, this painting, well wouldnt it be nice to have it as a
+          floor-tile in my bathroom <br />
           If this has cross your mind, WELCOME! <br />
           Here you are now, have a look at some artworks from different artist
           picked by your host!
@@ -22,12 +22,12 @@ function HomePage() {
           <br />
           We invite you to post what you thing of them,
           <br />
-          To create your favorites page where you'll find them in a floor-tile
+          To create your favorites page where you will find them in a floor-tile
           fashion, and just to give you a brief idea of what an artwork could be
           like if it were a tile!
         </p>
         <p>
-          Hope you'll enjoy them and who knows, end up with remodeling you're
+          Hope youll enjoy them and who knows, end up with remodeling you are
           whole...
           <br />
           bathroom! <br />
