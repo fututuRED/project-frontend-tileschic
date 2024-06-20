@@ -1,6 +1,7 @@
-export const URLart = "https://chic-tiles-backendus.onrender.com/artworks";
-export const URLfavorites =
-  "https://chic-tiles-backendus.onrender.com/favorites";
+const API_BASIC_URL = process.env.CHIC_TILES_API_URL;
+
+export const URLart = "`${API_BASIC_URL}/artworks`";
+export const URLfavorites = `${API_BASIC_URL}/favorites`;
 export const URLimg = `https://www.artic.edu/iiif/2/`;
-export const URLcomment = `https://chic-tiles-backendus.onrender.com/comments`;
-export const URLcrea = `https://chic-tiles-backendus.onrender.com/creations/`;
+export const URLcomment = `${API_BASIC_URL}/comments`;
+export const URLcrea = `${API_BASIC_URL}//creations/`;
