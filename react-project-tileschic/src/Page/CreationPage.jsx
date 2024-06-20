@@ -5,6 +5,7 @@ import NavbarPage from "./NavbarPage";
 import { URLimg, URLcrea } from "../consts";
 
 import "../css/App.css";
+
 const CreationPage = () => {
   const location = useLocation();
   const { artwork } = location.state || {};

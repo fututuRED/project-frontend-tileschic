@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../css/index.css";
 function ErrorPage() {
   return (
     <div className="err">

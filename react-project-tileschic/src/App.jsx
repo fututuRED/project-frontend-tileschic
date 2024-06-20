@@ -8,7 +8,7 @@ import SelectedPiecePage from "./Page/SelectedPiecePage";
 import CreationPage from "./Page/CreationPage";
 import { useState, useEffect } from "react";
 
-import "./App.css";
+import "./css/App.css";
 
 function App() {
   const [favorites, setFavorites] = useState([]);
