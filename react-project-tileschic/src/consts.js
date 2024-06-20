@@ -1,4 +1,4 @@
-const API_BASIC_URL = process.env.CHIC_TILES_API_URL;
+const API_BASIC_URL = import.meta.env.VITE_CHIC_TILE_API_URL;
 
 export const URLart = `${API_BASIC_URL}/artworks`;
 export const URLfavorites = `${API_BASIC_URL}/favorites`;

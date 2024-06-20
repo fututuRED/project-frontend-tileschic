@@ -14,18 +14,30 @@ function GalleryPage() {
     const fetchArtworks = async () => {
       try {
         const res = await axios.get(URLart);
-        setArtworks(res.data);
+        if (Array.isArray(res.data)) {
+          setArtworks(res.data);
+        } else {
+          console.error("Artworks response is not an array:", res.data);
+          setArtworks([]);
+        }
       } catch (error) {
-        console.log(error);
+        console.log("Error fetching artworks:", error);
+        setArtworks([]); // Set to empty array in case of error
       }
     };
 
     const fetchFavorites = async () => {
       try {
-        const res = await axios.get(`${URLfavorites}`);
-        setFavorites(res.data);
+        const res = await axios.get(URLfavorites);
+        if (Array.isArray(res.data)) {
+          setFavorites(res.data);
+        } else {
+          console.error("Favorites response is not an array:", res.data);
+          setFavorites([]);
+        }
       } catch (error) {
-        console.log(error);
+        console.log("Error fetching favorites:", error);
+        setFavorites([]); // Set to empty array in case of error
       }
     };
 
