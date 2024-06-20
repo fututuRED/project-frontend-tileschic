@@ -1,5 +1,6 @@
-export const URLart = "http://localhost:5005/artworks";
-export const URLfavorites = "http://localhost:5005/favorites";
+export const URLart = "https://chic-tiles-backendus.onrender.com/artworks";
+export const URLfavorites =
+  "https://chic-tiles-backendus.onrender.com/favorites";
 export const URLimg = `https://www.artic.edu/iiif/2/`;
-export const URLcomment = `http://localhost:5005/comments`;
-export const URLcrea = `http://localhost:5005/creations/`;
+export const URLcomment = `https://chic-tiles-backendus.onrender.com/comments`;
+export const URLcrea = `https://chic-tiles-backendus.onrender.com/creations/`;
