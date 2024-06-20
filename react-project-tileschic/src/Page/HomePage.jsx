@@ -35,38 +35,37 @@ function HomePage() {
           or galleries!
         </p>
       </div>
-      <footer>
-        <div className="about-container">
-          <h4>About Me</h4>
-          <img
-            src="https://cdn.vox-cdn.com/thumbor/pRci-DNLZez5I-eoQuY5u6_oJwo=/78x0:1322x933/1520x1013/filters:focal(78x0:1322x933):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55912251/1_tQM0hcRiO1ZWEAj_if-Tzw.0.jpeg"
-            alt="Avatar"
-            className="avatar"
-          />
 
-          <p>
-            Hello! Im Reda, a passionate developer. Feel free to have a look ath
-            those: the following platforms:
-          </p>
+      <div className="about-container">
+        <h4>About Me</h4>
+        <img
+          src="https://cdn.vox-cdn.com/thumbor/pRci-DNLZez5I-eoQuY5u6_oJwo=/78x0:1322x933/1520x1013/filters:focal(78x0:1322x933):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55912251/1_tQM0hcRiO1ZWEAj_if-Tzw.0.jpeg"
+          alt="Avatar"
+          className="avatar"
+        />
 
-          <div className="social-links">
-            <a
-              href="www.linkedin.com/in/reda-d-76b0942b9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="icon" />
-            </a>
-            <a
-              href="https://github.com/your-profile"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="icon" />
-            </a>
-          </div>
+        <p>
+          Hello! Im Reda, a passionate developer. Feel free to have a look ath
+          those: the following platforms:
+        </p>
+
+        <div className="social-links">
+          <a
+            href="www.linkedin.com/in/reda-d-76b0942b9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="icon" />
+          </a>
+          <a
+            href="https://github.com/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="icon" />
+          </a>
         </div>
-      </footer>
+      </div>
     </>
   );
 }
