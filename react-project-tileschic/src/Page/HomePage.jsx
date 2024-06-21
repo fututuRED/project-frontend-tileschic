@@ -51,14 +51,14 @@ function HomePage() {
 
         <div className="social-links">
           <a
-            href="www.linkedin.com/in/reda-d-76b0942b9"
+            href="https://:www.linkedin.com/in/reda-d-76b0942b9"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin className="icon" />
           </a>
           <a
-            href="https://github.com/your-profile"
+            href="https://github.com/fututuRED"
             target="_blank"
             rel="noopener noreferrer"
           >
