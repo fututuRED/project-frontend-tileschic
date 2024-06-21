@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import NavbarPage from "./NavbarPage";
 import { URLimg, URLcrea } from "../consts";
-
 import "../css/App.css";
 
 const CreationPage = () => {
@@ -92,7 +91,22 @@ const CreationPage = () => {
         )}
 
         <div className="favorites-grid">
-          <div className="favorite-tile" style={{ borderColor: borderColor }}>
+          {/* Preview tile that reflects user interactions */}
+          <div
+            className="preview-tile"
+            style={{
+              borderColor: borderColor,
+              borderStyle: "solid",
+              borderWidth: "5px",
+              padding: "10px",
+            }}
+          >
+            <h2>{title}</h2>
+            <p>{`Colorfulness: ${colorfulness}`}</p>
+            <p>{`Percentage: ${percentage}`}</p>
+            <p>{`Population: ${population}`}</p>
+          </div>
+          <div className="favorite-tile">
             <div className="form-container">
               <form onSubmit={handleSubmit}>
                 <label>
@@ -150,35 +164,34 @@ const CreationPage = () => {
                 <button type="submit">Save Changes</button>
               </form>
             </div>
-
-            {lastCreatedArtwork && (
-              <div className="last-created-artwork">
-                <h2>Last Created Artwork</h2>
-                <p>
-                  <strong>Title:</strong> {lastCreatedArtwork.title}
-                </p>
-                <p>
-                  <strong>Colorfulness:</strong>{" "}
-                  {lastCreatedArtwork.colorfulness}
-                </p>
-                <p>
-                  <strong>Percentage:</strong>{" "}
-                  {lastCreatedArtwork.color.percentage}
-                </p>
-                <p>
-                  <strong>Population:</strong>{" "}
-                  {lastCreatedArtwork.color.population}
-                </p>
-                {lastCreatedArtwork.artwork.image_id && (
-                  <img
-                    src={`${URLimg}${lastCreatedArtwork.artwork.image_id}/full/843,/0/default.jpg`}
-                    alt={lastCreatedArtwork.title}
-                    width="300"
-                  />
-                )}
-              </div>
-            )}
           </div>
+
+          {lastCreatedArtwork && (
+            <div className="last-created-artwork">
+              <h2>Last Created Artwork</h2>
+              <p>
+                <strong>Title:</strong> {lastCreatedArtwork.title}
+              </p>
+              <p>
+                <strong>Colorfulness:</strong> {lastCreatedArtwork.colorfulness}
+              </p>
+              <p>
+                <strong>Percentage:</strong>{" "}
+                {lastCreatedArtwork.color.percentage}
+              </p>
+              <p>
+                <strong>Population:</strong>{" "}
+                {lastCreatedArtwork.color.population}
+              </p>
+              {lastCreatedArtwork.artwork.image_id && (
+                <img
+                  src={`${URLimg}${lastCreatedArtwork.artwork.image_id}/full/843,/0/default.jpg`}
+                  alt={lastCreatedArtwork.title}
+                  width="300"
+                />
+              )}
+            </div>
+          )}
         </div>
       </div>
     </>

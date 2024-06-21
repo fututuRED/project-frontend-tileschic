@@ -12,20 +12,18 @@
 html,
 body {
   height: 100%;
-  margin: 10px;
   overflow-x: hidden;
 }
 
 h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.3rem;
 }
 
 ul {
   list-style: none;
 }
-p {
-}
+
 .nav-link {
   position: sticky;
   top: 10px;
@@ -34,11 +32,12 @@ p {
   flex-direction: row;
   justify-content: space-between;
   text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
-  font: bolder;
-  box-shadow: 0 4px 8px #0000001a;
-  transition: background-color 0.3s;
   z-index: 10;
+  margin: 15px 5px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(5px);
 }
 
 .nav-link a {
@@ -47,18 +46,18 @@ p {
   font-size: 1.2rem;
   font: x-large;
   text-align: center;
+  padding: 5px 10px;
+  transition: color 0.3s, box-shadow 0.3s;
 }
 
 .nav-link a:hover {
-  transition: transform 0.3s;
-  border: 10px double #387b2b1a;
-  box-shadow: 0 10px 15px #387b2b1a;
+  box-shadow: 0 0 0 5px #387b2b1a, 0 0 0 10px #67857c;
 }
 
 /* FavPage styling*/
 .page-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: min(900px, 90%);
   margin: 30px auto;
   padding: 20px;
   background-color: rgb(90, 128, 152);
@@ -66,10 +65,11 @@ p {
 .page-container h1 {
   text-align: center;
   font-size: 4rem;
-  background: -webkit-linear-gradient(#6a5c7f1a, #1c2b4d);
+  background: -webkit-linear-gradient(#7f7b841a, #1c2b4d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: #0e012c1a;
 }
+
 .page-container.with-content {
   background-image: url("https://free-images.com/lg/f4e0/marble_texture_background_png_13.jpg");
   background-repeat: no-repeat;
@@ -140,46 +140,54 @@ p {
   overflow: hidden;
   text-align: center;
   box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .favorite-tile h2 {
-  font-size: 0.6rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 2px;
   color: white;
 }
 
 .favorite-tile blockquote {
-  margin: 5px 0;
-  font-size: 0.5rem;
+  margin: 2px 0;
+  font-size: 0.6rem;
   color: white;
 }
 
 .favorite-tile a {
   display: block;
-  color: #1e265f;
+  color: #596cf7;
   text-decoration: none;
-  margin: 5px 0;
-  font-size: 0.5rem;
+  margin: 2px 0;
+  font-size: 0.7rem;
   font-weight: bolder;
+  padding: 2px 5px;
+  transition: background-color 0.5s, color 0.5s;
 }
-
+.favorite-tile a:hover {
+  background-color: rgb(95, 95, 138);
+  color: #ffffff;
+}
 /* Remove button styling */
 .remove {
   background-color: #eb8245;
   width: min-content;
   font-size: 0.5rem;
+  text-align: center;
+  line-height: 10px;
   color: #ffffff;
   border: none;
-  padding: 5px 10px;
-  font-size: 0.5rem;
-  border-radius: 5px;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.7rem;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 10px;
+  margin-top: 1px;
 }
 
-.favorite-tile-button:hover {
-  background-color: #c07645;
+.remove:hover {
+  background-color: #a34343;
 }
 
 .creation-page {
@@ -209,13 +217,29 @@ form {
   .page-container h1 {
     font-size: 1.5rem;
   }
+  .page-container blockquote {
+    font-size: 0.5;
+  }
   .page-container h2 {
-    font-size: 1.25rem;
+    font-size: 0.7rem;
   }
   .page-container p {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   .nav-link a {
-    font-size: 0.8rem;
+    font-size: 0.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .favorites-grid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 2 columns layout */
+  }
+}
+
+/* Media query for screens wider than 1024px */
+@media (min-width: 1024px) {
+  .favorites-grid {
+    grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 columns layout */
   }
 }

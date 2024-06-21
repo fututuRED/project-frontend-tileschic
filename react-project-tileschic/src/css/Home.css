@@ -12,17 +12,44 @@
 html,
 body {
   height: 100%;
-  margin: 10px;
   overflow-x: hidden;
 }
-h1 {
+.nav-link {
+  position: sticky;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  margin: 15px 5px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+nav-link a {
+  text-decoration: none;
+  color: #37485d;
+  font-size: 1.2rem;
+  font: x-large;
+  text-align: center;
+  padding: 5px 10px;
+  transition: color 0.3s, box-shadow 0.3s;
+}
+.nav-link a:hover {
+  box-shadow: 0 0 0 5px #387b2b1a, 0 0 0 10px #67857c;
+}
+
+.home h1 {
   text-align: center;
   font-size: 4rem;
   background: -webkit-linear-gradient(#373232, #2d811d1a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: #63c6501a;
 }
-h2 {
+.home h2 {
   text-align: center;
   font-size: 2.5rem;
   background: -webkit-linear-gradient(#183f101a, #ffffff);
@@ -32,7 +59,14 @@ h2 {
 
 /*homePage*/
 .home {
-  background-image: url("https://free-images.com/md/ce1f/bigot_glazed_tiles_floor.jpg");
+  background: linear-gradient(
+      to bottom,
+      rgba(244, 242, 242, 0.7),
+      rgba(92, 103, 106, 0.7)
+    ),
+    /* Gradient with transparency */
+      url("https://free-images.com/md/ce1f/bigot_glazed_tiles_floor.jpg")
+      no-repeat center center / cover;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -47,6 +81,8 @@ h2 {
   position: relative;
   overflow: hidden;
   z-index: 0;
+  max-width: min(900px, 90%);
+  margin-inline: auto;
 
   .home::before {
     content: "";
@@ -74,80 +110,125 @@ ul {
   list-style: none;
 }
 
-.nav-link {
-  position: sticky;
-  top: 10px;
-  width: 100%;
+/* Basic footer styling */
+.footer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-decoration: none;
-  padding: 10px 0;
-  font: bolder;
-  box-shadow: 0 4px 8px #0000001a;
-  transition: background-color 0.3s;
-  z-index: 10;
-}
-
-.nav-link a {
-  text-decoration: none;
-  color: #37485d;
-  font-size: 1.2rem;
-  font: x-large;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1f1f1;
   text-align: center;
 }
 
-.nav-link a:hover {
-  transition: transform 0.3s;
-  border: 10px double #387b2b1a;
-  box-shadow: 0 10px 15px #387b2b1a;
-}
 .about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   padding: 20px;
 }
+
 .about-container p {
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   margin-bottom: 10px;
 }
+
 .about-container h4 {
-  font-size: 1rem;
+  font-size: 0.6rem;
   color: #37485d;
 }
+
 .avatar {
-  width: 70px;
-  height: 70px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0 1rem;
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 1rem;
   color: #0a66c2;
   transition: color 0.3s;
 }
 
 a:hover .icon {
-  color: #0056b3; /* Darker color on hover */
+  color: #0056b3;
 }
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .home h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .home h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   .home p {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
   }
   .nav-link a {
     font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .about-container p {
+    font-size: 0.6rem;
+  }
+
+  .about-container h4 {
+    font-size: 0.8rem;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 60px;
+  }
+
+  .about-container {
+    p {
+      font-size: 0.8rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    font-size: 1.5rem;
   }
 }

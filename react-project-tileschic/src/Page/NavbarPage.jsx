@@ -5,19 +5,29 @@ function NavbarPage() {
   return (
     <ul className="nav-link">
       <li>
-        <NavLink to={"/"}>Home</NavLink>
+        <NavLink className="hover-effect" to={"/"}>
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"/gallery"}>Gallery</NavLink>
+        <NavLink className="hover-effect" to={"/gallery"}>
+          Gallery
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"/select"}>Details</NavLink>
+        <NavLink className="hover-effect" to={"/select"}>
+          Details
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"/fav-page"}>Your Favorites</NavLink>
+        <NavLink className="hover-effect" to={"/fav-page"}>
+          Your Favorites
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"/creations"}>Creations</NavLink>
+        <NavLink className="hover-effect" to={"/creations"}>
+          Creations
+        </NavLink>
       </li>
     </ul>
   );
