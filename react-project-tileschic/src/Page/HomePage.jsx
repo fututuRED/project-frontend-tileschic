@@ -15,7 +15,7 @@ function HomePage() {
           Here you are now, have a look at some artworks from different artist
           picked by your host!
         </p>
-        <h2>About</h2>
+        <h2>About what?</h2>
         <p>
           By displaying some of the finest, in our opinion, artworks from the
           Art Institute of Chicago;
@@ -43,7 +43,17 @@ function HomePage() {
           alt="Avatar"
           className="avatar"
         />
-
+        <p>
+          Thanks a lot to the AIofChicago for letting me use some of their
+          wonderfult artworks, do not hesitate to check more of these{" "}
+          <a
+            href="https://www.artic.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🌐
+          </a>
+        </p>
         <p>
           Hello! Im Reda, a passionate developer. Feel free to have a look ath
           those: the following platforms:

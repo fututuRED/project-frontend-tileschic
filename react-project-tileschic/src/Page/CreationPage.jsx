@@ -15,7 +15,7 @@ const CreationPage = () => {
   const [population, setPopulation] = useState(6); // Default or computed value
   const [borderColor, setBorderColor] = useState("#000000"); // New state for border color
   const [lastCreatedArtwork, setLastCreatedArtwork] = useState(null);
-  const [isFormVisible, setIsFormVisible] = useState(false); // Form visibility state
+  const [isFormVisible, setIsFormVisible] = useState(false);
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -47,11 +47,10 @@ const CreationPage = () => {
         percentage: percentage,
         population: population,
       },
-      borderColor: borderColor, // Include border color in submission
+      borderColor: borderColor,
     };
 
     try {
-      // Perform the POST request to create the new artwork
       const postResponse = await axios.post(URLcrea, newCreation);
       console.log("POST Response:", postResponse.data);
 
@@ -64,7 +63,6 @@ const CreationPage = () => {
       // Update the state with the new artwork data
       setLastCreatedArtwork(getResponse.data);
 
-      // Hide the form after submission
       setIsFormVisible(false);
     } catch (error) {
       console.error("Error submitting modified artwork:", error);
