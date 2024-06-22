@@ -39,7 +39,7 @@ function HomePage() {
       <div>
         <p>
           Thanks a lot to the AIofChicago for letting me use some of their
-          wonderfult artworks, do not hesitate to check more of these:
+          wonderful artworks, do not hesitate to check more of these:
           <a
             href="https://www.artic.edu/"
             target="_blank"
@@ -61,10 +61,10 @@ function HomePage() {
             />
             <p>
               Hello! Im Reda, a passionate developer. Feel free to have a look
-              ath those: the following platforms:
+              at those: the following platforms:
             </p>
             <a
-              href="https://:www.linkedin.com/in/reda-d-76b0942b9"
+              href="www.linkedin.com/in/reda-d-76b0942b9"
               target="_blank"
               rel="noopener noreferrer"
             >
