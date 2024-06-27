@@ -23,7 +23,7 @@ h2 {
 ul {
   list-style: none;
 }
-
+/* NAVBAR */
 .nav-link {
   position: sticky;
   top: 10px;
@@ -34,10 +34,11 @@ ul {
   text-decoration: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
-  z-index: 10;
+
   margin: 15px 5px;
   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
   backdrop-filter: blur(5px);
+  z-index: 10;
 }
 
 .nav-link a {
@@ -45,7 +46,7 @@ ul {
   color: #37485d;
   font-size: 1.2rem;
   font: x-large;
-  text-align: center;
+  /* text-align: center; */
   padding: 5px 10px;
   transition: color 0.3s, box-shadow 0.3s;
 }
@@ -169,6 +170,7 @@ ul {
   background-color: rgb(95, 95, 138);
   color: #ffffff;
 }
+
 /* Remove button styling */
 .remove {
   background-color: #eb8245;
@@ -185,7 +187,6 @@ ul {
   transition: background-color 0.3s;
   margin-top: 1px;
 }
-
 .remove:hover {
   background-color: #a34343;
 }
@@ -194,13 +195,6 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.favorites-grid {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 800px;
 }
 
 .preview-tile,
@@ -218,21 +212,13 @@ ul {
   padding: 10px;
   margin: 10px;
 }
-.creation-page {
-  h1 {
-    font-size: 2rem;
-    color: rgb(65, 64, 158);
-  }
-  p {
-    font-size: 1rem;
-  }
+.creation-page h1 {
+  font-size: 2rem;
+  color: rgb(65, 64, 158);
 }
-
-/* form {
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-} */
+.creation-page p {
+  font-size: 1rem;
+}
 
 @media (max-width: 768px) {
   .page-container h1 {
