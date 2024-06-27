@@ -101,7 +101,7 @@ const CreationPage = () => {
               padding: "10px",
             }}
           >
-            <h2>{title}</h2>
+            <h2>{title || artwork.title}</h2>
             <p>{`Colorfulness: ${colorfulness}`}</p>
             <p>{`Percentage: ${percentage}`}</p>
             <p>{`Population: ${population}`}</p>

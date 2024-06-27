@@ -194,8 +194,29 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px 30px;
-  padding: 20px;
+}
+
+.favorites-grid {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+}
+
+.preview-tile,
+.favorite-tile {
+  width: 45%;
+}
+
+.preview-tile {
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.form-container {
+  padding: 10px;
+  margin: 10px;
 }
 .creation-page {
   h1 {
@@ -207,11 +228,11 @@ ul {
   }
 }
 
-form {
+/* form {
   display: flex;
   flex-direction: column;
   margin: 5px;
-}
+} */
 
 @media (max-width: 768px) {
   .page-container h1 {
