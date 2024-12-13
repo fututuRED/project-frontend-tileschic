@@ -17,7 +17,7 @@ function HomePage() {
           <p>We Invite you to have a look at the gallery and...</p>
           <ul>
             <li>
-              <strong>CHOOSE</strong>by clicking on details and <br />
+              <strong>CHOOSE</strong>by clicking on details and
               <strong>DISCOVER</strong>a short introduction to the piece
             </li>
             <li>
@@ -28,15 +28,13 @@ function HomePage() {
               <strong>ADD IT</strong>to YOUR gallery
             </li>
             <li>
-              In your gallery the different pieces you'll add will be DISPLAYED,
-              <br /> in our creepy way,
-              <br /> like a bathroom wall, ARTISTICALLY TILED!
+              In your gallery the different pieces you'll add will be DISPLAYED
+              on something like a bathroom wall, ARTISTICALLY TILED!
             </li>
             <li>
               CREATE an artwork from the tile you like the most // WORK IN
               PROGRESS
             </li>
-            <br />
           </ul>
         </div>
         <div className="last-section">
