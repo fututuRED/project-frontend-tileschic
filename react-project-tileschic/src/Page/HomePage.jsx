@@ -17,29 +17,29 @@ function HomePage() {
           <p>We Invite you to have a look at the gallery and...</p>
           <ul>
             <li>
-              CHOOSEby clicking on details and DISCOVERa short introduction to
-              the piece
+              CHOOSE by clicking on details and DISCOVER a short introduction to
+              the piece;
             </li>
             <li>
-              Feel free to COMMENT the artwork by using your own pseudonym
+              Feel free to COMMENT the artwork by using your own pseudonym;
             </li>
-            <li>ADD ITto YOUR gallery</li>
+            <li>ADD IT to YOUR gallery;</li>
             <li>
               In your gallery the different pieces you'll add will be DISPLAYED
               on something like a bathroom wall, ARTISTICALLY TILED!
             </li>
             <li>
-              CREATE an artwork from the tile you like the most / WORK IN
-              PROGRESS
+              CREATE and EXPERIENCE a modelised TILES OF CHICago from one of the
+              different artworks at your disposal!
             </li>
           </ul>
         </div>
         <div className="last-section">
           <p>
-            Hope youll enjoy them and who knows, end up with remodeling you are
-            whole...
+            Hope youll enjoy them and with this fantastic opportunity,
             <br />
-            bathroom! <br />
+            who knows...
+            <br /> ending up remodeling you're whole bathroom! <br />
             OR, at least, having a different perspective while browsing in
             museums or galleries!
           </p>

@@ -35,7 +35,7 @@ function App() {
             }
           />
           <Route path="/gallery/:id" element={<DetailPage />} />
-          <Route path="/creations" element={<CreationPage />} />
+          <Route path="/creation" element={<CreationPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
         <Footer />

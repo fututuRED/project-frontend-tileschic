@@ -14,3 +14,35 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+
+.artwork-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.single-artwork {
+  border-width: 5px;
+  border-style: solid;
+  padding: 10px;
+  background-color: white; /* Default background color */
+}
+
+.artwork-tile {
+  width: 100%;
+  height: auto; /* Ensures images are responsive */
+}
+@media (max-width: 400px) {
+  .artwork-display {
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+  }
+  .artwork-tile {
+    width: 100%; /* Image takes full width of its grid cell */
+  }
+}
+@media (min-width: 1000px) {
+  .artwork-tile {
+    width: 80%;
+  }
+}

@@ -134,9 +134,9 @@ body {
 
 /* Remove button styling */
 .remove {
-  background-color: #eb8245;
+  background-color: #e9a3a3;
   width: min-content;
-  font-size: 0.5rem;
+  font-size: 0.9rem;
   text-align: center;
   line-height: 10px;
   color: #ffffff;
@@ -149,7 +149,7 @@ body {
   margin-top: 1px;
 }
 .remove:hover {
-  background-color: #a34343;
+  background-color: #c31b1b;
 }
 
 .creation-page {

@@ -62,7 +62,7 @@ function DetailPage() {
     }
   };
   const navigateToCreationPage = () => {
-    navigate("/creations", { state: { artwork } });
+    navigate("/creation", { state: { artwork } });
   };
 
   if (!artwork) {

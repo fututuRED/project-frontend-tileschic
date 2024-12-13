@@ -118,6 +118,9 @@ li {
   box-shadow: 0 0 0 5px #387b2b1a, 0 0 0 10px #67857c;
 }
 
+.last-section {
+  z-index: 10;
+}
 /* FOOTER //////////////////////////////*/
 .footer {
   display: flex;
@@ -169,7 +172,9 @@ li {
 a:hover .icon {
   color: #0056b3;
 }
-
+.artwork-tile {
+  width: 300px;
+}
 /* Media Queries for responsiveness */
 
 @media (max-width: 1024px) {

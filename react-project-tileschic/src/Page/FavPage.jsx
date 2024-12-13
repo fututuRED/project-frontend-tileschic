@@ -41,7 +41,9 @@ function FavPage() {
   if (!favorites.length) {
     return (
       <>
-        <p>Loading favorites...</p>
+        <a href="#" aria-busy="true">
+          Loading the artworks, please wait…
+        </a>
       </>
     );
   }
@@ -69,12 +71,8 @@ function FavPage() {
                 </div>
                 {visibleContent[favorite.id] && (
                   <div className="favorite-tile-content">
-                    <h2>{favorite.artwork.title}</h2>
                     <blockquote>
-                      Artist: {favorite.artwork.artist_title || "Unknown"}
-                      <br />
-                      Place of Origin:{" "}
-                      {favorite.artwork.place_of_origin || "Unknown"}
+                      {favorite.artwork.artist_title || "Unknown"}
                     </blockquote>
                     <Link to={`/gallery/${favorite.artwork.id}`}>Details</Link>
                     <button
