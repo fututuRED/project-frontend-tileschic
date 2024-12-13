@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { URLimg, URLfavorites } from "../consts";
 import { Link } from "react-router-dom";
-import NavbarPage from "./NavbarPage";
-import "../css/App.css";
+
+import "../css/Fav.css";
 function FavPage() {
   const [favorites, setFavorites] = useState([]);
   const [visibleContent, setVisibleContent] = useState([]);
@@ -41,7 +41,6 @@ function FavPage() {
   if (!favorites.length) {
     return (
       <>
-        <NavbarPage />
         <p>Loading favorites...</p>
       </>
     );
@@ -49,7 +48,6 @@ function FavPage() {
 
   return (
     <>
-      <NavbarPage />
       <div
         className={`page-container ${
           contentExists ? "with-content" : "no-content"

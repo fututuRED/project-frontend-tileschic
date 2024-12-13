@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import NavbarPage from "./NavbarPage";
 import { URLimg, URLcrea } from "../consts";
 import "../css/App.css";
 
@@ -71,7 +71,6 @@ const CreationPage = () => {
   if (!artwork) {
     return (
       <>
-        <NavbarPage />
         <div>No artwork selected. Please go back and select an artwork.</div>
       </>
     );
@@ -79,7 +78,6 @@ const CreationPage = () => {
 
   return (
     <>
-      <NavbarPage />
       <div className="creation-page">
         <h1>ArtWork in Progress...</h1>
         {artwork.image_id && (

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { URLart, URLfavorites, URLimg } from "../consts";
 import { Link } from "react-router-dom";
-import NavbarPage from "./NavbarPage";
-import "./../css/index.css";
+import "./../css/Gallery.css";
 
 function GalleryPage() {
   const [artworks, setArtworks] = useState([]);
@@ -74,54 +73,57 @@ function GalleryPage() {
 
   return (
     <>
-      <NavbarPage />
-      <ul className="gal">
-        {artworks.map((artwork) => {
-          const isFav = isFavorite(artwork.id);
-          return (
-            <div key={artwork.id} className="gal-grid-container">
-              {artwork.image_id ? (
-                <figure className="gal-grid-img">
-                  <img
-                    src={`${URLimg}${artwork.image_id}/full/843,/0/default.jpg`}
-                    alt={artwork.title}
-                  />
-                  <figcaption>{artwork.title}</figcaption>
-                </figure>
-              ) : (
-                <span>Image not available</span>
-              )}
-              <div className="gal-text-grid">
-                <p>
-                  <button
-                    className="fav-but"
-                    disabled={isFetching}
-                    onClick={() =>
-                      isFav ? removeFavorite(isFav.id) : addFavorite(artwork.id)
-                    }
-                    data-tooltip={
-                      isFavorite(artwork.id)
-                        ? "Remove from Favorites"
-                        : "Add to Favorites"
-                    }
-                  >
-                    {isFavorite(artwork.id)
-                      ? "In Favorites"
-                      : "Add to Favorites"}
-                  </button>
-                </p>
-                <span>Artist: {artwork.artist_title || "Unknown"}</span>
-                <span>
-                  Place of Origin: {artwork.place_of_origin || "Unknown"}
-                </span>
-                <Link className="details" to={`/gallery/${artwork.id}`}>
-                  Details
-                </Link>
+      <div className="gal">
+        <ul>
+          {artworks.map((artwork) => {
+            const isFav = isFavorite(artwork.id);
+            return (
+              <div key={artwork.id} className="gal-grid-container">
+                {artwork.image_id ? (
+                  <figure className="gal-grid-img">
+                    <img
+                      src={`${URLimg}${artwork.image_id}/full/843,/0/default.jpg`}
+                      alt={artwork.title}
+                    />
+                    <figcaption>{artwork.title}</figcaption>
+                  </figure>
+                ) : (
+                  <span>Image not available</span>
+                )}
+                <div className="gal-text-grid">
+                  <p>
+                    <button
+                      className="fav-but"
+                      disabled={isFetching}
+                      onClick={() =>
+                        isFav
+                          ? removeFavorite(isFav.id)
+                          : addFavorite(artwork.id)
+                      }
+                      data-tooltip={
+                        isFavorite(artwork.id)
+                          ? "Remove from Favorites"
+                          : "Add to Favorites"
+                      }
+                    >
+                      {isFavorite(artwork.id)
+                        ? "In Favorites"
+                        : "Add to Favorites"}
+                    </button>
+                  </p>
+                  <span>Artist: {artwork.artist_title || "Unknown"}</span>
+                  <span>
+                    Place of Origin: {artwork.place_of_origin || "Unknown"}
+                  </span>
+                  <Link className="details" to={`/gallery/${artwork.id}`}>
+                    Details
+                  </Link>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </ul>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 }

@@ -3,11 +3,10 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { URLart, URLimg, URLcomment } from "../consts";
 import axios from "axios";
-import NavbarPage from "./NavbarPage";
 import { useNavigate, Navigate } from "react-router-dom";
-import "../css/index.css";
+import "../css/Gallery.css";
 
-function SelectedPiecePage() {
+function DetailPage() {
   const { id } = useParams();
   const [artwork, setArtwork] = useState(null);
   const [comments, setComments] = useState([]);
@@ -69,7 +68,6 @@ function SelectedPiecePage() {
   if (!artwork) {
     return (
       <>
-        <NavbarPage />
         <div>Loading...</div>
       </>
     );
@@ -77,7 +75,6 @@ function SelectedPiecePage() {
 
   return (
     <>
-      <NavbarPage />
       <div className="select">
         <h1>{artwork.title}</h1>
         {artwork.image_id ? (
@@ -130,4 +127,4 @@ function SelectedPiecePage() {
   );
 }
 
-export default SelectedPiecePage;
+export default DetailPage;
