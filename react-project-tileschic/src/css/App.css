@@ -44,7 +44,7 @@ ul {
 .nav-link a {
   text-decoration: none;
   color: #37485d;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   font: x-large;
   /* text-align: center; */
   padding: 5px 10px;
@@ -232,9 +232,6 @@ ul {
   }
   .page-container p {
     font-size: 0.5rem;
-  }
-  .nav-link a {
-    font-size: 0.4rem;
   }
 }
 

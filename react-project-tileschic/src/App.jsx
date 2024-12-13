@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
 import GalleryPage from "./Page/GalleryPage";
 import FavPage from "./Page/FavPage";
 import HomePage from "./Page/HomePage";
@@ -34,6 +35,7 @@ function App() {
         <Route path="/creations" element={<CreationPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -172,10 +172,10 @@ a:hover .icon {
     font-size: 0.9rem;
   }
   .nav-link a {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .footer {
     flex-direction: row;
     justify-content: space-between;
@@ -206,7 +206,7 @@ a:hover .icon {
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .footer {
     padding: 60px;
   }
