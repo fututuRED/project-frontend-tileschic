@@ -14,8 +14,8 @@ function HomePage() {
         </p>
         <div className="rules">
           <h2>And then?</h2>
+          <p>We Invite you to have a look at the gallery and...</p>
           <ul>
-            <p>We Invite you to have a look at the gallery and...</p>
             <li>
               <strong>CHOOSE</strong>by clicking on details and <br />
               <strong>DISCOVER</strong>a short introduction to the piece

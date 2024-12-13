@@ -74,8 +74,6 @@ li {
   background: -webkit-linear-gradient(#4b70451a, #2e2929);
   -webkit-background-clip: text;
   -webkit-text-fill-color: #171010b3;
-  /* text-align: left;
-  margin: 0.3rem 0.5rem; */
 }
 
 .rules {
@@ -85,10 +83,7 @@ li {
   text-align: left;
   margin-left: 4rem;
 }
-/* .last-section p {
-  font-size: 1.2rem;
-  margin: 0.3rem 0.5rem;
-} */
+
 /* Navbar styling*/
 .nav-link {
   position: sticky;
@@ -166,7 +161,7 @@ li {
 }
 
 .icon {
-  font-size: 1rem;
+  font-size: 2rem;
   color: #0a66c2;
   transition: color 0.3s;
 }
@@ -199,11 +194,11 @@ a:hover .icon {
 
 @media (min-width: 769px) {
   .nav-link {
-    display: flex; /* Always show nav on larger screens */
+    display: flex;
   }
 
   .menu-button {
-    display: none; /* Hide the toggle button */
+    display: none;
   }
 }
 
@@ -250,7 +245,7 @@ a:hover .icon {
     display: block; /* Show the toggle button */
     color: white;
     background: none;
-    background-color: rgb(152, 148, 148);
+    background-color: rgb(111, 193, 81);
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -285,6 +280,6 @@ a:hover .icon {
   }
 
   .icon {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
