@@ -17,22 +17,19 @@ function HomePage() {
           <p>We Invite you to have a look at the gallery and...</p>
           <ul>
             <li>
-              <strong>CHOOSE</strong>by clicking on details and
-              <strong>DISCOVER</strong>a short introduction to the piece
+              CHOOSEby clicking on details and DISCOVERa short introduction to
+              the piece
             </li>
             <li>
-              Feel free to <strong>COMMENT</strong> the artwork by using your
-              own pseudonym
+              Feel free to COMMENT the artwork by using your own pseudonym
             </li>
-            <li>
-              <strong>ADD IT</strong>to YOUR gallery
-            </li>
+            <li>ADD ITto YOUR gallery</li>
             <li>
               In your gallery the different pieces you'll add will be DISPLAYED
               on something like a bathroom wall, ARTISTICALLY TILED!
             </li>
             <li>
-              CREATE an artwork from the tile you like the most // WORK IN
+              CREATE an artwork from the tile you like the most / WORK IN
               PROGRESS
             </li>
           </ul>
