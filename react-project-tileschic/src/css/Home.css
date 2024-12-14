@@ -178,6 +178,13 @@ a:hover .icon {
 /* Media Queries for responsiveness */
 
 @media (max-width: 1024px) {
+  .nav-link {
+    display: flex;
+  }
+
+  .menu-button {
+    display: none;
+  }
   .footer {
     padding: 60px;
   }
