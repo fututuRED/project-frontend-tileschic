@@ -18,7 +18,10 @@ function CreationPage() {
   }
 
   return (
-    <div className="creation-page">
+    <div
+      className="creation-page"
+      style={{ backgroundColor: pageBackgroundColor, minHeight: "100vh" }}
+    >
       <form>
         <label>
           Page Background Color:

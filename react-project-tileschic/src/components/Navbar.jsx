@@ -30,11 +30,6 @@ function Navbar() {
             Your Favorites
           </NavLink>
         </li>
-        <li>
-          <NavLink className="hover-effect" to={"/creation"}>
-            Creation
-          </NavLink>
-        </li>
       </ul>
     </nav>
   );
