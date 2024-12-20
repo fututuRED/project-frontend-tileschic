@@ -49,9 +49,11 @@ function HomePage() {
             wonderful artworks, do not hesitate to check more of these:
             <a
               href="https://www.artic.edu/"
+              data-tooltip="ArtInstituteOfChicago"
+              data-placement="bottom"
               target="_blank"
               rel="noopener noreferrer"
-              alt="AIofChicago-site"
+              alt="Art-Institute-of-Chicago-website"
             >
               🌐
             </a>

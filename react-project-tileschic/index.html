@@ -3,13 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/pico.min.css" />
-    <link rel="icon" type="image/svg+xml" href="/Favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/Favicon.svg" />
     <link rel="stylesheet" href="/src/css/Home.css" />
     <link rel="stylesheet" href="/src/css/Fav.css" />
     <link rel="stylesheet" href="/src/css/App.css" />
     <link rel="stylesheet" href="/src/css/Gallery.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tiles-so-chic</title>
+
+    <meta
+      name="description"
+      content="Transform abstract art into chic floor tiles—perfect for your bathroom! Explore our gallery, choose your favorite pieces, add them to your gallery, and design a virtual artistic wall. Join us to make art part of your daily decor!"
+    />
+    <style>
+      .home {
+        background: linear-gradient(
+            to bottom,
+            rgba(244, 242, 242, 0.7),
+            rgba(92, 103, 106, 0.7)
+          ),
+          url("https://free-images.com/md/ce1f/bigot_glazed_tiles_floor.jpg")
+            no-repeat center center / cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        max-width: min(900px, 90%);
+        margin-inline: auto;
+      }
+      .page-container.with-content {
+        background-image: url("https://free-images.com/lg/f4e0/marble_texture_background_png_13.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
