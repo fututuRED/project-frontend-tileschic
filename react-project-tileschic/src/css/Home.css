@@ -24,9 +24,32 @@ body {
   height: 100%;
   z-index: 1;
 }
-/* 
 
-   */
+.home {
+  background: linear-gradient(
+      to bottom,
+      rgba(244, 242, 242, 0.7),
+      rgba(92, 103, 106, 0.7)
+    ),
+    url("https://free-images.com/md/ce1f/bigot_glazed_tiles_floor.webp"),
+    url("https://free-images.com/lg/ce1f/bigot_glazed_tiles_floor.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  max-width: min(900px, 90%);
+  margin-inline: auto;
+}
 .home h1 {
   font-size: 4rem;
   background: -webkit-linear-gradient(#373232, #35f70e1a);
