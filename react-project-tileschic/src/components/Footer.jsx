@@ -22,7 +22,7 @@ function Footer() {
               href="https://linkedin.com/in/reda-d-76b0942b9"
               target="_blank"
               rel="noopener noreferrer"
-              alt="linkedin-link"
+              aria-label="Visit my LinkedIn profile"
             >
               <FaLinkedin className="icon" />
             </a>
@@ -30,7 +30,7 @@ function Footer() {
               href="https://github.com/fututuRED"
               target="_blank"
               rel="noopener noreferrer"
-              alt="github-link"
+              aria-label="Visit my GitHub"
             >
               <FaGithub className="icon" />
             </a>
